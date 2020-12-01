@@ -1,0 +1,858 @@
+html, body {
+  background-color: white !important;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  height: 100%;
+  animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+a {
+  text-decoration: none;
+  color: #996525;
+}
+
+a:hover {
+  cursor: pointer;
+  color: white;
+}
+
+h3 {
+  margin: 0;
+}
+
+td {
+  padding: .25vw 0;
+  padding-right: 1vw;
+  font-size: 1.2vw;
+}
+
+.amount-btn:hover {
+  background: #4f3306;
+  cursor: pointer;
+}
+
+/* -----------------------------Navigation----------------------------------- */
+nav {
+  background: #FDCF76;
+  width: 100%;
+  position: relative;
+}
+
+nav div, nav ul, nav li {
+  display: inline-block;
+}
+
+/* -------------------------Navigation-Toggler------------------------------- */
+.toggler-container {
+  margin-left: 3%;
+  flex: 0 0 30%;
+  display: none;
+}
+
+.toggler {
+  margin: 0.25vw 1vw;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25vw;
+}
+
+.toggler-icon:hover, .toggler:focus {
+  text-decoration: none;
+  color: white;
+}
+
+.toggler:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.toggler-icon {
+  vertical-align: middle;
+  font-size: 2.5vw;
+  color: #996525;
+}
+
+/* ---------------------------Navigation-Menu-------------------------------- */
+.menu {
+  position: relative;
+  width: 100%;
+  align-items: center;
+  padding: 0 0 0.25%;
+}
+
+.menu-container {
+  font-size: 1.5vw;
+  width: 30%;
+  padding-left: 2.5%;
+}
+
+.menu-item {
+  padding-right: 50px;
+}
+
+.account-menu {
+  display: none;
+}
+
+/* -------------------------Navigation-Search-------------------------------- */
+.search-container {
+  width: 30%;
+}
+
+.search-bar {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  flex: 0 0 80%;
+  height: 2.5vw;
+  padding: 0 1vw;
+  border-radius: 20px;
+  border: none;
+  font-size: 1vw;
+  margin-right: 1.5%;
+}
+
+.search-btn {
+  flex: 0 0 9%;
+  height: 2.5vw;
+  color: #996525;
+  background: white;
+  border: none;
+  font-size: 1.25vw;
+  border-radius: 50%;
+}
+
+.search-btn:hover {
+  background: #996525;
+  color: white;
+  cursor: pointer;
+}
+
+::placeholder {
+  font-size: 1vw;
+}
+
+/* --------------------Navigation-Manage Account----------------------------- */
+.account-manage {
+  width: 30%;
+  text-align: right;
+  margin-left: auto !important;
+  font-size: 1.2vw;
+}
+
+.account-link {
+  position: relative;
+  display: block;
+  margin-left: 25px;
+  font-weight: 500;
+}
+
+/* ---------------------Navigation Bar in Small Device----------------------- */
+@media screen and (max-width: 768px) {
+  .toggler-container {
+    display: inline-block;
+    width: 20%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .toggler {
+    display: inline-block;
+    font-size: 1.5vw;
+  }
+
+  .menu {
+    padding: 2% 0;
+    display: inline-block;
+  }
+
+  .menu-container {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    padding: 0;
+    display: none;
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
+
+  .show {
+    display: block;
+    width: 100%;
+
+    transition: all 1s ease-out ;
+  }
+
+  .menu-list {
+    background: #FDCF76;
+    width: 100%;
+    padding: 1.5% 0;
+    margin-top: 1vh;
+    /* display: none; */
+  }
+
+  .menu-item {
+    display: block;
+    padding: 2.5% 5%;
+    font-size: 2.5vw;
+  }
+
+  .account-menu {
+    padding-right: 5%;
+  }
+
+  .search-container {
+    width: 40%;
+    margin-left: 5%;
+  }
+
+  .search-bar {
+    position: relative;
+    vertical-align: middle;
+  }
+
+  .search-box {
+    height: 5vw;
+    font-size: 2vw;
+  }
+
+  .search-btn {
+    flex: 0 0 13%;
+    height: 5.25vw;
+    font-size: 2vw;
+    align-self: center;
+  }
+
+  .account-manage {
+    width: 25%;
+    font-size: 1.75vw;
+  }
+
+  .toggler {
+    display: inline-block;
+  }
+
+  .toggler-icon {
+    font-size: 3.5vw;
+  }
+
+  ::placeholder {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 448px) {
+  .toggler-icon {
+    font-size: 8vw;
+  }
+
+  .search-bar {
+    margin-left: auto;
+    display: inline-block;
+    text-align: right;
+    width: 75%;
+    margin-left: auto;
+  }
+
+  .menu-list {
+    padding-bottom: 5%;
+  }
+
+  .menu-item {
+    margin-top: 4vw;
+    font-size: 4vw;
+    height: 4vw;
+  }
+
+  .search-container {
+    width: 65%;
+    padding: 2% 0;
+    padding-right: 2.5%;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .search-box {
+    margin: 0;
+    padding-left: 5%;
+    height: 8vw;
+    width: 75%;
+    font-size: 3vw;
+  }
+
+  .search-btn {
+    width: 8.5vw;
+    height: 8.5vw;
+    padding-top: 1.5%;
+  }
+
+  .account-menu {
+    display: block;
+    margin-left: auto;
+    margin-top: 7vw;
+    text-align: right;
+  }
+
+  .account-manage-list {
+    padding: 0;
+    font-size: 3vw;
+  }
+
+  .account-manage {
+    display: none;
+  }
+
+  .toggler-icon {
+    font-size: 7vw;
+  }
+
+  ::placeholder {
+    font-size: 3vw;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* -----------------------------Dashboard------------------------------------ */
+.dashboard {
+  padding: 0 7.5% 10%;
+}
+
+.header-dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.5%;
+  color: #4f3306;
+  align-items: center;
+}
+
+.dashboard-title {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.view {
+  flex: 0 0 50%;
+  max-width: 50%;
+  text-align: right;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.view-link:hover {
+  color: #4f3306;
+}
+
+/* --------------------------------Box--------------------------------------- */
+.box-container {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.box {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 22.5%;
+  flex: 0 0 22.5%;
+  max-width: 22.5%;
+  position: relative;
+  min-height: 1px;
+  margin: 0 1.2% 5%;
+  background: #FDCF76;
+  color: #996525;
+  border-radius: 20px;
+}
+
+
+.box-header {
+  border-radius: 20px 20px 0 0;
+}
+
+.box-title {
+  padding: 5%;
+}
+
+
+.box-footer {
+  padding: 0 5%;
+  font-size: 0.8vw;
+  font-weight: 500;
+  font-size: small;
+}
+
+.box:hover, .box-header:hover {
+  background: -webkit-linear-gradient(to right, #faaca8, #ddd6f3);
+  background: linear-gradient(to right, #faaca8, #ddd6f3);
+}
+
+.box-image {
+  width: 100%;
+  max-height: 30vh;
+}
+
+@media (max-width: 1200px) {
+  .box {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    flex: 0 0 47.5%;
+    max-width: 47.5%;
+  }
+
+  .box-header {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 448px) {
+  .box {
+    flex: 0 0 95%;
+    max-width: 95%;
+  }
+
+  .box-header {
+    font-size: 12px;
+  }
+}
+
+/* --------------------------------Buypage----------------------------------- */
+
+.buying-form {
+  min-height: 100vh;
+  margin-bottom: 10%;
+}
+
+.buypage {
+  padding: 2.5% 20%;
+  color: #4f3306;
+}
+
+.buypage:after {
+  content: "";
+  display: block;
+}
+
+.buypage-title {
+  font-size: 2rem;
+  margin: 2% 0;
+}
+
+.buy-item {
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 4px #FDCF76;
+  padding: 5%;
+  border-radius: 25px;
+  margin: 5% 0 10%;
+}
+
+.item.img-container {
+  flex: 0 0 35%;
+  max-width: 35%;
+  padding: 5%;
+}
+
+.item.desc-container {
+  background: #FDCF76;
+  flex: 0 0 55%;
+  max-width: 55%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.buy-item {
+  padding: 0;
+  align-items: center;
+}
+
+.img-item {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.description {
+  padding: 12% 10%;
+  border-radius: 25px;
+  color: #4f3306;
+}
+
+.desc {
+  font-weight: 500;
+}
+
+.item-title {
+  font-size: 2.25vw;
+  margin-bottom: 1.75vw;
+}
+
+.title-desc {
+  margin: 1vw 0 0.5vw;
+  font-size: 1.25vw;
+  font-weight: 600;
+}
+
+.desc-text {
+  margin-top: 0;
+  font-size: 1.1vw;
+}
+
+.no-buy {
+  padding: 300px 50px;
+  text-align: center;
+}
+
+.out-of-stock {
+  text-align: center;
+  padding-left: 300px 50px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* --------------------------------Amount to Buy----------------------------- */
+.buying {
+  margin-top: 2vw;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
+
+.amount-to-buy {
+  flex: 0 0 40%;
+  max-width: 40%;
+  margin-right: 15%;
+}
+
+/* ----------------------------Amount to Buy Box----------------------------- */
+.buy-amount-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.75vw 0;
+}
+
+.buy-amount-text, .total-price-text {
+  font-size: 1.25vw;
+}
+
+.amount-btn {
+  flex: 0 0 25%;
+  max-width: 25%;
+  border-radius: 50%;
+  border: 0;
+  background: #996525;
+  font-size: 1.5vw;
+  color: white;
+  vertical-align: center;
+  height: 2.6vw;
+}
+
+.amount-value {
+  flex: 0 0 40%;
+  max-width: 40%;
+  text-align: center;
+  display: inline;
+  border: none;
+  background: none;
+  font-family: 'Raleway', sans-serif;
+  align-self: center;
+  margin: 4.5% 0;
+  font-size: 1.25vw;
+}
+
+.decrement, .address-error {
+  font-size: 0.75rem;
+  color: crimson;
+  margin-top: 15px;
+}
+
+.decrement {
+  font-size: 0.5rem;
+  color: red;
+}
+/* -------------------------------Total Price-------------------------------- */
+.buying-price {
+  font-weight: 700;
+}
+
+.buying-price {
+  font-size: 1.25vw;
+  margin: 15% 0;
+}
+
+/* -----------------------------For Other Size------------------------------- */
+@media (max-width: 1200px) {
+  .buypage {
+    margin: 5% 7.5% 15%;
+    padding: 0 5%;
+    line-height: 1.3;
+  }
+
+  .item-title {
+    font-size: 3.25vw;
+  }
+
+  td {
+    font-size: 1.25vw;
+  }
+
+  .title-desc {
+    font-size: 1.5vw;
+  }
+
+  .desc-text {
+    margin-top: 0.5vw;
+    font-size: 1.25vw;
+  }
+
+  .amount-to-buy {
+    font-size: 3vw;
+  }
+
+  .description {
+    padding: 14% 8%;
+  }
+
+  .desc-container {
+    padding: 0 1%;
+    line-height: 1.33;
+  }
+
+  .item.img-container {
+    padding: 4%;
+  }
+
+  .amount-btn {
+    flex: 0 0 25%;
+    max-width: 25%;
+    background: #996525;
+    font-size: 1.5vw;
+    height: 3.5vw;
+  }
+
+  .buy-amount-text {
+    font-size: 1.5vw;
+  }
+
+  .total-price-text {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .buypage {
+    padding: 0;
+    margin: 7.5% 5%;
+  }
+
+  .item-title {
+    font-size: 3.5vw;
+  }
+
+  td {
+    font-size: 1.75vw;
+  }
+
+  .title-desc {
+    font-size: 2vw;
+    margin-top: 5%;
+  }
+
+  .desc-text {
+    margin-top: 0.5vw;
+    font-size: 1.5vw;
+  }
+
+  .amount-to-buy {
+    font-size: 3.5vw;
+  }
+
+  .amount-value {
+    font-size: 0.9rem;
+  }
+
+  .desc-container {
+    padding: 0 1%;
+    line-height: 1.33;
+  }
+
+  .item.img-container {
+    padding: 4%;
+  }
+
+  .amount-btn {
+    flex: 0 0 25%;
+    max-width: 25%;
+    background: #996525;
+    font-size: 2vw;
+    height: 4vw;
+  }
+
+  .buy-amount-text {
+    font-size: 2vw;
+  }
+
+  .total-price-text {
+    font-size: 2vw;
+  }
+
+  .buying-price {
+    font-size: 1.75vw;
+  }
+}
+
+@media (max-width: 488px) {
+  .buypage {
+    padding: 0;
+    margin: 7.5% 5%;
+  }
+
+  .item-title {
+    font-size: 4.5vw;
+  }
+
+  td {
+    font-size: 2.25vw;
+  }
+
+  .title-desc {
+    font-size: 2.75vw;
+  }
+
+  .desc-text {
+    font-size: 2vw;
+  }
+
+  .amount-to-buy {
+    font-size: 3.5vw;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-right: 12.5%;
+  }
+
+  .amount-value {
+    font-size: 2.5vw;
+  }
+
+  .item.img-container {
+    padding: 12% 4%;
+  }
+
+  .amount-btn {
+    flex: 0 0 25%;
+    max-width: 25%;
+    background: #996525;
+    font-size: 2vw;
+    height: 5vw;
+  }
+
+  .buy-amount-text {
+    font-size: 2.5vw;
+  }
+
+  .total-price-text {
+    font-size: 2.5vw;
+  }
+
+  .buying-price {
+    font-size: 2.5vw;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* ---------------------------------Footer----------------------------------- */
+
+.footer-content {
+  background: #FDCF76;
+  text-align: center;
+  color: #996525;
+  font-size: 1.5vw;
+  padding: 3%;
+}
+
+@media (max-width: 488px) {
+  .footer-content {
+    font-size: 3.5vw;
+    padding: 7.5%;
+  }
+}
+
+/* ----------------------------Address--------------------------------------- */
+.address-text {
+  margin: 2.5% 0;
+}
+
+.address-fill-container {
+  margin-bottom: 2.5%;
+  padding: 2.5%;
+  text-align: center;
+  border: solid 1px #4f3306;
+  border-radius: 10px;
+}
+
+.address {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  outline: none;
+  border: none;
+}
+
+.button-container {
+  text-align: right;
+}
+
+.btn {
+  width: 160px;
+  height: 50px;
+  font-size: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.buy {
+  background: #FDCF76;
+  color: #4f3306;
+}
+
+.cancel {
+  background: #4f3306;
+  color: white;
+}
+
+.btn:hover {
+  color: white;
+  background: #996525;;
+}
+
+@media (max-width:768px){
+  .btn {
+    width: 120px;
+    height: 40px;
+    font-size: 1.15rem;
+  }
+}
